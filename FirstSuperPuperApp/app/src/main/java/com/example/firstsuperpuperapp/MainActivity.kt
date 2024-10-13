@@ -12,6 +12,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.firstsuperpuperapp.ui.theme.FirstSuperPuperAppTheme
+import androidx.compose.foundation.layout.Column
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -32,10 +33,14 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
+    Column(modifier = modifier) {
+        Text(
+            text = "Hello $name!"
+        )
+        Text(
+            text = "Wassup?"
+        )
+    }
 }
 @Preview(showBackground = true)
 @Composable
